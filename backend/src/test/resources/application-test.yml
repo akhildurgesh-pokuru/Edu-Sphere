@@ -1,0 +1,17 @@
+# Used by integration tests. Uses its own database so the real data is never touched.
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/Edu-Sphere-test?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
+  flyway:
+    clean-disabled: false
+app:
+  storage-path: ${java.io.tmpdir}/edusphere-test-uploads
+  allow-teacher-signup: true
+  mail:
+    enabled: false
+  bootstrap-teacher:
+    email: ""
+    password: ""
+logging:
+  level:
+    com.edusphere.common.GlobalExceptionHandler: OFF

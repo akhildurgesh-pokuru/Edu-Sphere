@@ -1,0 +1,17 @@
+# build output
+backend/target/
+frontend/node_modules/
+frontend/dist/
+# secrets and local config
+.env
+*.local
+backend/config/application.yml
+backend/uploads/
+uploads/
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log
+frontend/test-results/
+frontend/playwright-report/
